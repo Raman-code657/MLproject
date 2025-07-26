@@ -1,4 +1,4 @@
-# 📊 Math Score Predictor
+# 📊 End-to-End Student Performance Prediction Pipeline
 
 An end-to-end Machine Learning project to predict students' **math scores** based on other features. This project demonstrates the complete ML lifecycle including **data processing, model building, packaging, and deployment on AWS** using **Elastic Beanstalk** and **CI/CD pipelines**.
 
@@ -36,7 +36,6 @@ Accurately predicting students' math scores can help educators identify students
 ## 📁 Project Structure
 # End-to-End Student Performance Prediction Pipeline
 
-![Project Banner](https://i.imgur.com/8a25j2B.png)
 
 ## Overview
 
@@ -58,27 +57,6 @@ The project is structured as a modular pipeline, ensuring scalability and mainta
 
 ***
 
-## 📊 Exploratory Data Analysis & Insights
-
-The EDA phase, detailed in the `1 . EDA STUDENT PERFORMANCE .ipynb` notebook, revealed several key insights:
-
-* **Gender Performance**: On average, female students have a better overall score than men, whereas males have scored higher in Maths.
-* **Lunch Impact**: Students who have a 'standard' lunch perform significantly better than those with a 'free/reduced' lunch.
-* **Test Preparation**: Students who complete a test preparation course achieve higher scores across all three subjects.
-* **Parental Education**: There is a clear positive correlation between the parental level of education and student scores. Parents with a master's or bachelor's degree tend to have children who score higher.
-* **Race/Ethnicity**: Performance varies across different ethnic groups, with 'Group E' students showing the highest average scores and 'Group A' showing the lowest.
-
-![Score Distribution by Gender and Lunch](https://i.imgur.com/k26p4sC.png)
-
-***
-
-## 🤖 Model Training & Evaluation
-
-The model training process, found in `2 . MODEL TRAINING .ipynb`, aimed to predict the `math_score`.
-
-### Preprocessing Steps:
-* **Categorical Features**: `gender`, `race_ethnicity`, `parental_level_of_education`, `lunch`, and `test_preparation_course` were one-hot encoded.
-* **Numerical Features**: `reading_score` and `writing_score` were scaled using `StandardScaler`.
 
 ### Models Evaluated:
 A variety of regression models were tested to determine the best fit for the data:
@@ -93,8 +71,6 @@ After evaluation, **Linear Regression** and **Ridge Regression** emerged as the 
 
 The model's predictions closely align with the actual values, as shown in the regression plot below:
 
-![Actual vs. Predicted Values](https://i.imgur.com/39a6WlV.png)
-
 ***
 
 ## 🛠️ Technology Stack
@@ -102,19 +78,17 @@ The model's predictions closely align with the actual values, as shown in the re
 * **Languages**: Python
 * **Libraries**: Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib, CatBoost, XGBoost
 * **Web Framework**: Flask
-* **Cloud & DevOps**: AWS Elastic Beanstalk, AWS S3, AWS CodePipeline, Docker, Git, GitHub
+* **Cloud & DevOps**: AWS Elastic Beanstalk, AWS S3, AWS CodePipeline, Git, GitHub
 
 ***
 
 ## ☁️ AWS Deployment Architecture
 
-This project is deployed using a continuous integration and continuous deployment (CI/CD) pipeline on AWS.
+This project is deployed using a continuous integration and continuous deployment pipeline on AWS.
 
 1.  **Source**: The code is hosted on GitHub.
 2.  **Build & Deploy**: A push to the main branch triggers **AWS CodePipeline**.
 3.  **Deployment Environment**: The pipeline automatically builds a Docker container and deploys the Flask application to **AWS Elastic Beanstalk**.
-
-![AWS Architecture](https://i.imgur.com/4l3gK5S.png)
 
 ***
 
