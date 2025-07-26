@@ -1,6 +1,8 @@
 # 📊 End-to-End Student Performance Prediction Pipeline
 
-An end-to-end Machine Learning project to predict students' **math scores** based on other features. This project demonstrates the complete ML lifecycle including **data processing, model building, packaging, and deployment on AWS** using **Elastic Beanstalk** and **CI/CD pipelines**.
+This project implements a complete end-to-end machine learning pipeline to predict student math scores. The pipeline covers every stage of a typical ML project, from data ingestion and exploratory data analysis to model training, evaluation, and finally, deployment on a cloud platform.
+
+The core objective is to predict a student's performance in a math test based on various factors like gender, ethnicity, parental level of education, and test preparation. The project culminates in a robust pipeline that automates deployment on **AWS Elastic Beanstalk**.
 
 ---
 
@@ -29,22 +31,9 @@ Accurately predicting students' math scores can help educators identify students
 - **Languages**: Python
 - **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Flask
 - **Tools**: Git, GitHub, VS Code
-- **Cloud & DevOps**: AWS Elastic Beanstalk, CodePipeline, GitHub Actions
+- **Cloud Deployment**: AWS Elastic Beanstalk, CodePipeline, GitHub Actions
 
 ---
-
-## 📁 Project Structure
-# End-to-End Student Performance Prediction Pipeline
-
-
-## Overview
-
-This project implements a complete end-to-end machine learning pipeline to predict student math scores. The pipeline covers every stage of a typical ML project, from data ingestion and exploratory data analysis to model training, evaluation, and finally, deployment on a cloud platform.
-
-The core objective is to predict a student's performance in a math test based on various demographic and socio-economic factors like gender, ethnicity, parental level of education, and test preparation. The project culminates in a robust CI/CD pipeline that automates deployment on **AWS Elastic Beanstalk**.
-
-***
-
 ## 🚀 Project Pipeline
 
 The project is structured as a modular pipeline, ensuring scalability and maintainability.
@@ -71,17 +60,6 @@ After evaluation, **Linear Regression** and **Ridge Regression** emerged as the 
 
 The model's predictions closely align with the actual values, as shown in the regression plot below:
 
-***
-
-## 🛠️ Technology Stack
-
-* **Languages**: Python
-* **Libraries**: Pandas, NumPy, Scikit-learn, Seaborn, Matplotlib, CatBoost, XGBoost
-* **Web Framework**: Flask
-* **Cloud & DevOps**: AWS Elastic Beanstalk, AWS S3, AWS CodePipeline, Git, GitHub
-
-***
-
 ## ☁️ AWS Deployment Architecture
 
 This project is deployed using a continuous integration and continuous deployment pipeline on AWS.
@@ -91,4 +69,3 @@ This project is deployed using a continuous integration and continuous deploymen
 3.  **Deployment Environment**: The pipeline automatically builds a Docker container and deploys the Flask application to **AWS Elastic Beanstalk**.
 
 ***
-
